@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  background-color: #121214;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+.principal {
+  max-width: 1440px;
+  width: 100%;
+  height: 2037px;
+  padding: 0 1rem;
+}
+
+header {
+  background-color: #202024;
+  max-width: 1440px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name {
+  flex-direction: row;
+  /* o Horizontal é row*/
+  width: 208.07px;
+  height: 60.76px;
+  top: 20px;
+  left: 616px;
+  gap: 15.99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  width: 64.08;
+  height: 60.76;
+}
+
+#txt {
+  display: flex;
+  flex-direction: row;
+  width: 128px;
+  height: 41px;
+  color: #e1e1e6;
+}
+
+#txt p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 25px;
+  /*naõ deixei o tamanho fiel ao figma 25.59*/
+  line-height: 160%;
+  letter-spacing: 0;
+}
+
+/*FIM CSS DO HEADER*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.primeiro-card {
+  background-color: #202024;
+  max-width:832px;
+  width:100% ;
+  max-height: 621px;
+  top: 132px;
+  left: 448px;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-maior {
+  max-width: 832px;
+  background-color: #202024;
+  width: 100%;
+  /*DEIXEIXEI SEM ALTURA PARA PODER CRESCER A MEDIDA QUE FOR INSERIDO O CONTEUDO*/
+  /*height: 1104px;*/
+  opacity: 1;
+  top: 785px;
+  left: 448px;
+  border-radius: 8px;
+}
+
+main .primeiro-card,
+.card-maior,
+.card-lateral {
+  margin: 30px;
+  /*usei margem nas div´s para dar o espaçamento, já que estavam juntas.*/
+}
+.primeiro-card,
+.card-maior {
+  padding: 40px;
+}
+
+/*CSS CARD LATERAL*/
+.card-lateral {
+  background-color: #202024;
+  width: 256px;
+  /*height: 294px;*/
+  top: 132px;
+  left: 160px;
+  border-radius: 8px;
+}
+
+#img-capa {
+  width: 256px;
+  height: 72px;
+  opacity: 70%;
+}
+
+.profile {
+  width: 60px;
+  height: 60px;
+  top: 40px;
+  left: 98px;
+  border: 2px solid #00b37e;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+#profile-img {
+  width: 49.09px;
+  top: 45.45px;
+  left: 103.45px;
+  border-radius: 5px;
+}
+.card-lateral-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+      position: relative;
+    z-index: 3;
+    top: -40px;
+}
+.sobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sobre .name {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #e1e1e6;
+}
+.sobre .funcao {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: middle;
+  color: #8d8d99;
+}
+.card-lateral hr {
+  margin-top: 24px;
+  width: 256;
+  height: 0px;
+  opacity: 1;
+  top: 188px;
+  border-width: 1px;
+  color: #323238;
+}
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.editar-perfil {
+  width: 192px;
+  height: 50;
+  top: 212px;
+  left: 32px;
+  border-radius: 8px;
+  gap: 10px;
+  border: 1px solid #00b37e;
+  background-color: #202024;
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-bottom: 14px;
+  padding-left: 24px;
+  margin: 32px 24px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+.editar-perfil p {
+  font-weight: 700px;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #00b37e;
+}
+
+.reacoes{
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 111px;
+height: 20px;
+top: 684px;
+left: 106px;
+gap: 7px;
+padding-top: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.comentario{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 16px;
+
+  max-width: 752px;
+height: 156px;
+top: 548px;
+left: 40px;
+
+
+}
+.coment{
+      display: grid;
+    gap: 10px;
+  width: 686px;
+height: 120px;
+top: 548px;
+left: 106px;
+border-radius: 9px;
+
+
+}
+.coment .sobre{
+  align-items: flex-start;
+}
+.coment .texto{
+  /*retirei a altura para deixar o elemento livre*/
+ /*max-width: 213px;*/
+height: 22px;
+top: 73px;
+left: 16px;
+padding-top: 16px;
+
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+
+line-height: 160%;
+letter-spacing: 0;
+
+
+color: #C4C4CC;
+
+}
+
+.coment .campo{
+  padding: 16px;
+  width: 686px;
+height: 120px;
+top: 548px;
+left: 106px;
+border-radius: 9px;
+
+
+  background-color: #29292E;
+}
+
+.reacoes p{
+ color: #8D8D99;
+
+font-weight: 700;
+font-style: Bold;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0;
+
+/*width: 81px;
+height: 16px;
+top: 686px;
+left: 136px;*/
+
+}
+.aplaudido p{
+  color: #00B37E;
+}
+.comentarios{
+  display: grid;
+  gap: 24px;
+}
+
+/*CARD DIREITO*/
+.cabecalho2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cabecalho2 .sobre {
+  align-items: flex-start;
+}
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cabecalho .tempo {
+  font-weight: 400;
+  font-style: normal; /*no figma está regular, mas ela não funciona*/
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0; /*o tamanho aqui não é percentagem*/
+  text-align: right;
+  color: #8d8d99;
+}
+
+.conteudo {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.conteudo label {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+.conteudo textarea {
+  max-width: 752px; 
+  /*width: 100%;*/ /* ao ives de usar os tamnhos fixos, usei min e max para poder ter uma responsividade certa*/
+  max-height: 96px;
+  min-height: 96px;
+  background-color: #121214;
+  top: 420px;
+  left: 40px;
+  border-radius: 8px;
+  border: 1px solid #00b37e;
+  padding: 0;
+  resize: none;
+  color: #fff;
+  font-size: 15px;
+}
+.card-maior .conteudo textarea {
+  border: 1px solid;
+
+}
+.conteudo .publicar {
+  max-width: 108px;
+  width: 100%;
+  
+  top: 532px;
+  left: 40px;
+  border-radius: 8px;
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-bottom: 14px;
+  padding-left: 24px;
+  background-color: #00875f;
+  cursor: pointer;
+}
+.conteudo .publicar p{
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 100%;
+color: #FFFFFF;
+
+}
+
+.conteudo {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0;
+  color: #c4c4cc;
+}
+.conteudo .hashtag {
+  color: #00b37e;
+}
+.conteudo hr {
+  max-width: 752px;
+  top: 354px;
+  left: 40px;
+  border-width: 1px;
+  color: #323238;
+}
+.organizacao {
+}
+.direito {
+}
+
+
+/*Modal*/
+
+/* Fundo escuro */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none; /* escondido por padrão */
+}
+
+/* Quando o modal é alvo (:target) */
+.modal:target {
+  display: block;
+}
+
+/* Caixa do conteúdo */
+.modal-content {
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+
+  background: #202024;
+  width: 432PX;
+  height: 238PX;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+ /* top: 306px;
+  left: 504px;*/ /*ACHEI MELHOR USAR O MARGIN 10% AUTO PARA PODER SE ENQUADRAR NA RESPONSIVIDADE*/
+}
+.modal-excluir{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Botão de fechar */
+ .cancelar:hover, .confirmar:hover{
+  background-color: #29292E; /* cor de fundo */ 
+  border: none; 
+  border-radius: 6px; 
+  cursor: pointer;
+  transition: all 0.8s ease;
+  
+}
+
+.modal h2{
+font-weight: 700;
+font-size: 24px;
+line-height: 140%;
+letter-spacing: 0;
+text-align: center;
+
+}
+.modal .p1{
+  width: 240px;
+height: 52px;
+
+font-weight: 400;
+font-size: 16px;
+line-height: 163%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.botoes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:none;
+ 
+}
+.cancelar, .confirmar{
+border: none;
+  background: none;
+ /* width: 120px;*/
+height: 48px;
+border-radius: 8px;
+gap: 8px;
+padding-top: 12px;
+padding-right: 32px;
+padding-bottom: 12px;
+padding-left: 32px;
+
+}
+.cancelar p{
+  width: 56px;
+height: 24px;
+color: #E1E1E6;
+
+
+font-weight: 700;
+font-size: 14px;
+
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+
+}
+
+.confirmar p{
+  /*width: 74px;*/ /*não estava dando certo com altura fixa*/
+height: 24px;
+color: #F75A68;
+ 
+font-weight: 700;
+font-size: 14px;
+
+line-height: 24px;
+
+text-align: center;
+vertical-align: middle;
+
+}
+
+/*FIM DO MODAL*/
+
+/*PRIMEIRO ELEMENTO*/
+
+/* Responsivo: empilha verticalmente em telas menores 
+@media (max-width: 768px) {
+  .left, .right {
+    flex: 1 1 100%; 
+  }
+}*/

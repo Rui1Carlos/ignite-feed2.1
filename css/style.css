@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  background-color: #121214;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  
+}
+.principal{
+  max-width: 1440px;
+   width: 100%;
+  height: 2037px;
+  padding: 0 1rem;
+}
+
+header {
+  background-color: #202024;
+  max-width: 1440px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name {
+  flex-direction: row;
+  /* o Horizontal é row*/
+  width: 208.07px;
+  height: 60.76px;
+  top: 20px;
+  left: 616px;
+  gap: 15.99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  width: 64.08;
+  height: 60.76;
+}
+
+#txt {
+  display: flex;
+  flex-direction: row;
+  width: 128px;
+  height: 41px;
+  color: #e1e1e6;
+}
+
+#txt p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 25px;
+  /*naõ deixei o tamanho fiel ao figma 25.59*/
+  line-height: 160%;
+  letter-spacing: 0;
+}
+
+/*FIM CSS DO HEADER*/
+.container {
+  
+  display: flex;
+  flex-wrap: wrap; 
+  display: flex;
+  justify-content: center; 
+  min-height: 100vh; 
+  width: 100%;
+}
+
+.primeiro-card {
+  background-color: #202024;
+  width: 832px;
+  height: 621px;
+  top: 132px;
+  left: 448px;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.card-maior {
+  background-color: #202024;
+  width: 832px;
+  height: 1104px;
+  opacity: 1;
+  top: 785px;
+  left: 448px;
+  border-radius: 8px;
+}
+
+main .primeiro-card,
+.card-maior,
+.card-lateral {
+  margin: 30px;
+  /*usei margem nas div´s para dar o espaçamento, já que estavam juntas.*/
+}
+
+/*CSS CARD LATERAL*/
+.card-lateral {
+  background-color: #202024;
+  width: 256px;
+  height: 294px;
+  top: 132px;
+  left: 160px;
+  border-radius: 8px;
+}
+
+#img-capa {
+  width: 256px;
+  height: 72px;
+  opacity: 70%;
+}
+
+.profile {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  top: 40px;
+  left: 98px;
+  border: 2px #00b37e;
+}
+
+#profile-img {
+  width: 49.09px;
+  height: 49.09px;
+  top: 45.45px;
+  left: 103.45px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 2;
+}
+#retangulo {
+  width: 55px;
+  height: 55px;
+  top: 40px;
+  
+  border-radius: 8px;
+  background-color: #202024;
+  border: 2px solid #00b37e;
+  position: absolute;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Responsivo: empilha verticalmente em telas menores 
+@media (max-width: 768px) {
+  .left, .right {
+    flex: 1 1 100%; 
+  }
+}*/
