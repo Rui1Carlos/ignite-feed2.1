@@ -320,6 +320,7 @@ left: 136px;*/
   color: #00B37E;
 }
 .comentarios{
+  display: none;
   display: grid;
   gap: 24px;
 }

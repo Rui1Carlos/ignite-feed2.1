@@ -42,7 +42,7 @@
                   <p class="funcao">UI Designer</p>
                 </div>
               </div>
-              <hr />
+              <hr>
               <div class="botao">
                 <button class="editar-perfil">
                   <img src="assets/Frame.png" />
@@ -98,7 +98,7 @@
                   cols="50"
                   placeholder="Nossa, adorei amigo! Parabé|"
                 ></textarea>
-                <button class="publicar" onclick="coment()">
+                <button class="publicar" onclick="publicar()">
                   <p>publicar</p>
                 </button>
               </div>
@@ -127,7 +127,7 @@
               </div>
 
               <div class="conteudo">
-                <p>
+                <p id="publicacao">
                   Fala pessoal 👋<br /><br />
 
                   Finalmente finalizei meu novo site/portfólio. Foi um baita
@@ -144,16 +144,17 @@
                 <label for="post">deixe o seu feedback</label>
 
                 <textarea
-                  id="post"
+                  id="comen"
                   name="post"
                   rows="4"
                   cols="50"
                   placeholder="Escreva um comentário..."
-                ></textarea>
+                  onkeydown="comentar(event)"
+                  ></textarea>
 
-                <section class="comentarios">
+                <section class="comentarios" style="display: none;" id="comentarios">
                   <!--PRIMEIRA SECÇÃO DE COMENTARIOS-->
-                  <div class="comentario">
+                  <div class="comentario" >
                     <img src="assets/Rectangle 4234.png" alt="" srcset="" />
                     <div>
                       <div class="coment">
@@ -203,7 +204,7 @@
                               </div>
                             </div>
                           </div>
-                          <p class="texto">Muito bom Devon, parabéns!! 👏👏</p>
+                          <p id="comentario" class="texto">Muito bom Devon, parabéns!! 👏👏</p>
                         </div>
 
                         <button class="reacoes">

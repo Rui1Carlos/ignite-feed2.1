@@ -162,3 +162,127 @@
                 </section>
               </div>
             </div>
+
+
+
+
+
+
+            <!--COMENTARIOS-->
+
+<section class="comentarios" style="display: none;" id="comentarios">
+  <!--PRIMEIRA SECÇÃO DE COMENTARIOS-->
+  <div class="comentario" id="comentario">
+    <img src="assets/Rectangle 4234.png" alt="" srcset="" />
+    <div>
+      <div class="coment">
+        <div class="campo">
+          <div class="cabecalho">
+            <div class="sobre">
+              <!--No design o nome está errado-->
+              <p class="name">
+                Leslie Alexander
+                <span class="tempo">(você)</span>
+              </p>
+              <p class="tempo">Cerca de 2h</p>
+            </div>
+
+            <div>
+              <!-- Link para abrir o modal -->
+              <a href="#meuModal"><img src="assets/Delete.png" /></a>
+              <!--<img src="assets/Delete.png">-->
+            </div>
+
+            <!-- Estrutura do modal -->
+            <div id="meuModal" class="modal">
+              <div class="modal-content">
+                <div class="modal-excluir">
+                  <h2>Excluir comentário</h2>
+                  <p class="p1">
+                    Você tem certeza que gostaria de excluir
+                    este comentário?
+                  </p>
+                </div>
+
+                <div class="botoes">
+                  <a href="#">
+                    <button class="cancelar">
+                      <p>cancelar</p>
+                    </button>
+                  </a>
+
+                  <a href="#">
+                    <button class="confirmar">
+                      <p>Sim, excluir</p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="comentario" class="texto">Muito bom Devon, parabéns!! 👏👏</p>
+        </div>
+
+        <button class="reacoes">
+          <img src="assets/Vector.png" />
+          <p>Aplaudir • 03</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--FIM DA PRIMEIRA SECÇÃO DE COMENTARIOS-->
+
+  <!--AQUI ESTAVAM AS  SECÇÓES DE COMENTARIOS]-->
+
+  <!-- segunda secção de comentarios-->
+  <div class="comentario">
+    <img src="assets/Rectangle 4235.png" alt="" srcset="" />
+    <div>
+      <div class="coment">
+        <div class="campo">
+          <div class="cabecalho">
+            <div class="sobre">
+              <!--No design o nome está errado-->
+              <p class="name">Jenny Wilson</p>
+              <p class="tempo">Cerca de 2h</p>
+            </div>
+          </div>
+          <p class="texto">Adorei seu novo portifa Devon!</p>
+        </div>
+
+        <span class="aplaudido">
+          <button class="reacoes">
+            <img src="assets/Vector (2).png" />
+            <p>Aplaudir • 33</p>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DA SEGUNDA SECÇÃO DE COMENTARIOS-->
+
+  <!-- TERCEIRA secção de comentarios-->
+  <div class="comentario">
+    <img src="assets/Rectangle 4234 (4).png" alt="" srcset="" />
+    <div>
+      <div class="coment">
+        <div class="campo">
+          <div class="cabecalho">
+            <div class="sobre">
+              <!--No design o nome está errado-->
+              <p class="name">Leslie Alexander</p>
+              <p class="tempo">Cerca de 6h</p>
+            </div>
+          </div>
+          <p class="texto">💜💜</p>
+        </div>
+
+        <button class="reacoes">
+          <img src="assets/Vector.png" />
+          <p>Aplaudir • 03</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DA TERCEIRA SECÇÃO DE COMENTARIOS-->
+</section>

@@ -1,15 +1,39 @@
 let posts = [];
 let coments = [];
 
-function coment() {
-  let novo_coment = document.getElementById("post");
-  if (novo_coment.value !="") {
-      coments.push(novo_coment.value);
+function publicar() {
+  let nova_pub = document.getElementById("post");
+  if (nova_pub.value !="") {
+    posts.push(nova_pub.value);
   }
     
-    if (coments.length > 0) {
+  if (posts.length > 0) {
+    let publicacao = document.getElementById("publicacao")
+    publicacao.innerHTML = nova_pub.value
       let div = document.getElementById("card-maior");
       div.style.display = "block";
     
   }
+
 }
+
+function comentar(event) {
+  
+  if (event.key == "Enter") {
+      
+      let texto = event.target.value
+      let comentario = document.getElementById("comentario")
+      //console.log(comentario)
+    comentario.innerHTML = texto
+    let div = document.getElementById("comentarios");
+    div.style.display = "block";
+        
+      event.target.value = ""; 
+      
+    } 
+      
+  }
+  
+
+
+
