@@ -286,3 +286,217 @@
   </div>
   <!-- FIM DA TERCEIRA SECÇÃO DE COMENTARIOS-->
 </section>
+
+<!-- ELEMENTOS DO JS-->
+  function addComentario() {
+  if (texto != "") {
+  
+  let section_comentario = document.getElementById("comentarios")
+  
+  
+  let div_comentario = document.createElement("div")
+  div_comentario.className = "comentario"
+  
+  section_comentario.appendChild = (div_comentario)
+  
+  let img = document.createElement("img");
+  img.src = "./assets/Rectangle 4234.png"
+  div_comentario.appendChild = (img)
+  
+  let div = document.createElement("div")
+  div_comentario.appendChild = (div)
+  
+  let div_coment = document.createElement("div")
+  div_coment.className = "coment"
+  div.appendChild = (div_coment)
+  
+  
+  
+  let div_campo = document.createElement("div")
+  div_campo.className = "campo"
+  div_coment.appendChild("div_campo")
+  
+  let div_cabecalho = document.createElement("div")
+  div_cabecalho.className = "cabecalho"
+  div_campo.appendChild(div_cabecalho)
+  
+  let div_sobre = document.createElement("div")
+  div_sobre.className = "sobre"
+  div_cabecalho.appendChild(div_sobre)
+  
+  let p = document.createElement(p)
+  p.className = "name"
+  p.innerHTML = "Leslie Alexander"
+  div_sobre.appendChild(p)
+  
+  let p1 = document.createElement("p")
+  p1.className = "name"
+  p1.innerHTML = "Cerca de 2h"
+  div_sobre.appendChild(p1)
+  
+  let div2 = document.createElement("div")
+  div_cabecalho.appendChild(div2)
+  
+  let a = document.createElement("a")
+  a.href = ("#Modal")
+  
+  const img2 = document.createElement("img");
+  img2.src = "./assets/Delete.png";
+  
+  a.appendChild(img2);
+  div2.appendChild(a)
+  
+  
+  
+  let div_modal = document.createElement("div")
+  
+  div_cabecalho.appendChild(div_modal)
+  let p2 = document.createElement("p")
+  p2.id = "comentario"
+  p2.className = "texto"
+  
+  div_campo.appendChild(p2)
+  
+  
+  
+  
+  }
+  }
+
+
+
+
+
+  <!--COMENTARIOS COM JS-->
+
+  // Renderiza todos os comentários na tela
+  function renderizarComentarios() {
+  lista.innerHTML = '';
+  
+  if (comentarios.length === 0) {
+  lista.innerHTML = '<p style="text-align: center; color: #999;">Nenhum comentário ainda. Seja o primeiro!</p>';
+  return;
+  }
+  
+  comentarios.forEach(com => {
+  const isUsuarioAtual = com.nome === usuarioAtual;
+  const selo = isUsuarioAtual ? '<span class="tempo">(você)</span>' : '';
+  const modalId = `modal-${com.id}`;
+  
+  const div = document.createElement('div');
+  div.classList.add('comentario');
+  div.innerHTML = `
+  <img src="assets/Rectangle 4234.png" alt="Avatar" />
+  <div>
+    <div class="coment">
+      <div class="campo">
+        <div class="cabecalho">
+          <div class="sobre">
+            <p class="name">
+              ${com.nome} ${selo}
+            </p>
+            <p class="tempo">${tempoRelativo(com.data)}</p>
+          </div>
+          <div>
+            <a href="#${modalId}">
+              <img src="assets/Delete.png" alt="Excluir" />
+            </a>
+          </div>
+  
+          <!-- Modal de exclusão -->
+          <div id="${modalId}" class="modal">
+            <div class="modal-content">
+              <div class="modal-excluir">
+                <h2>Excluir comentário</h2>
+                <p class="p1">Você tem certeza que gostaria de excluir este comentário?</p>
+              </div>
+              <div class="botoes">
+                <a href="#">
+                  <button class="cancelar">cancelar</button>
+                </a>
+                <a href="#">
+                  <button class="confirmar" data-id="${com.id}">Sim, excluir</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="texto">${com.mensagem}</p>
+      </div>
+      <button class="reacoes" data-id="${com.id}">
+        <img src="assets/Vector.png" alt="Aplaudir" />
+        <p>Aplaudir • ${com.apleudir || 0}</p>
+      </button>
+    </div>
+  </div>
+  `;
+  
+  lista.appendChild(div);
+  });
+  
+  // Adiciona eventos aos botões de confirmar exclusão (criados dinamicamente)
+  document.querySelectorAll('.confirmar').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const id = btn.getAttribute('data-id');
+  excluirComentario(id);
+  window.location.hash = ''; // Fecha o modal
+  });
+  });
+  
+  // Adiciona eventos aos botões de aplaudir
+  document.querySelectorAll('.reacoes').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const id = btn.getAttribute('data-id');
+  aplaudirComentario(id);
+  });
+  });
+  }
+  
+  // Adiciona um novo comentário
+  function adicionarComentario(nome, mensagem) {
+  const novo = {
+  id: Date.now().toString(), // ID único baseado no timestamp
+  nome: nome,
+  mensagem: mensagem,
+  data: new Date().toISOString(),
+  apleudir: 0
+  };
+  comentarios.push(novo);
+  renderizarComentarios();
+  }
+  
+  // Exclui um comentário pelo ID
+  function excluirComentario(id) {
+  comentarios = comentarios.filter(com => com.id !== id);
+  renderizarComentarios();
+  }
+  
+  // Incrementa o contador de aplausos
+  function aplaudirComentario(id) {
+  const com = comentarios.find(c => c.id === id);
+  if (com) {
+  com.apleudir = (com.apleudir || 0) + 1;
+  renderizarComentarios(); // Re-renderiza para atualizar o contador
+  }
+  }
+  
+  // Evento de envio do formulário
+  form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const nome = document.getElementById('nome').value.trim();
+  const mensagem = document.getElementById('mensagem').value.trim();
+  
+  if (nome && mensagem) {
+  adicionarComentario(nome, mensagem);
+  form.reset();
+  document.getElementById('nome').value = usuarioAtual; // mantém o nome padrão
+  } else {
+  alert('Preencha todos os campos!');
+  }
+  });
+  
+   
+  // Renderiza a lista inicial
+  renderizarComentarios();
