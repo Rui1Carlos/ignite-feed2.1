@@ -108,15 +108,17 @@ function comentar(event) {
   
   function adicionarComentario(nome, mensagem) {
     const novo = {
-      id: Date.now().toString(), // ID único baseado no timestamp
+      
+      id: Date.now().toString(), // ID único baseado no timestamp, não consegui com o tamanho do vetor
       nome: nome,
       mensagem: mensagem,
       data: new Date().toISOString(),
       apleudir: 0
     };
 
-    coments.push(novo);
+    coments.unshift(novo);
     atualizarComentarios();
+    
   }
   
   function excluirComentario(id) {
@@ -124,11 +126,15 @@ function comentar(event) {
     atualizarComentarios();
   }
   
+
+
   function aplaudirComentario(id) {
     const com = coments.find(c => c.id === id);
     
-    if (com) {
-      com.apleudir = (com.apleudir || 0) + 1;
+    if (com ) {
+     
+      if (com.apleudir == 0) //para adicionar comentario somente se ainda não tiver.
+      com.apleudir += 1;
       atualizarComentarios(); 
     }
   }
@@ -141,7 +147,8 @@ function comentar(event) {
     let comentario = document.getElementById("comentario")
 
     adicionarComentario(usuarioAtual, texto)
-      comentario.value=""
+    comentario.value = ""
+    comentario.innerHTML=""
     
     
         
@@ -152,6 +159,3 @@ function comentar(event) {
       
 }
   
-
-
-
